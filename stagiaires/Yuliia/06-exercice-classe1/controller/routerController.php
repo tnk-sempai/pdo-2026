@@ -7,9 +7,6 @@
 
 # suivant les actions utilisateur, appelez les vues.
 
-
-
-
 // chargement des sépendances, ici la gestion de message
 require ROOT_PROJECT."/model/CommentaireModel.php";
 
@@ -29,7 +26,7 @@ if(isset($_POST['email'],$_POST['text_comment'],$_POST['title'],$_POST['full_nam
 }
 
 // recuperation de tous les messages (fake)
-// $commentaire=selectAllMessages($connectDB);
+$comments=readAllCommentaires($connectDB);
 
 // bonne pratique, fermeture de connexion
 $connectDB=null;

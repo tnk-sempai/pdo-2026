@@ -24,16 +24,18 @@ function addCommentaire(PDO $db,string $email,string $text_comment,string $title
    $retour=$prepare->execute();
    return $retour; // true en cas de réussite, false en cas d'échec
 
-
-
-
 //   var_dump($db,$mail,$message);
-
-
 }
 
-function readAllCommentaires(){
+function readAllCommentaires(PDO $connect): array{
+$stmt=$connect->query("SELECT * FROM `commentaire` ORDER BY `post_date` DESC");
+// un tableau avec les results
+$result= $stmt-> fetchAll(PDO::FETCH_ASSOC);
 
+// Bonne pratique 
+$stmt->closeCursor();
+// retour du tableau
+ return $result;
 }
 
 function countAllCommentaires(){

@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet"  href="css/styles.css">
-    <title>Page d'accueil</title>
+    <title>NW - <?= ucfirst($_GET['p']) ?></title>
 </head>
 
 <body>
@@ -14,10 +14,17 @@
         <?php
         include ROOT_PROJECT . "/view/inc/header.php";
         ?>
+</nav>
+    <nav class="nav_mobile">
+    
+        <?php
+        include ROOT_PROJECT . "/view/inc/header_mobile.php";
+        ?>
+        
     </nav>
 </header>
    
-    <div class="form_wrapper">
+    <div class="section_wrapper">
     <h2>Ajoutez un commentaire</h2>
     <form class="form" action="" method="POST" >
     <label for="email">Votre mail</label>
@@ -28,9 +35,10 @@
         <input type="text" name="title" id="title" placeholder="title">
         <label for="text_comment">Message</label>
         <textarea id="text_comment" name="text_comment" rows="4" placeholder="Ce que vous avez pensé de votre visite..."></textarea>
-        <button type="submit" class="submit-btn">Publier le message</button>
+        <button type="submit" class="submit-btn">Ajouter</button>
     </form>
     </div>
+  <script src="js/script.js"></script>
 </body>
 
 </html>
