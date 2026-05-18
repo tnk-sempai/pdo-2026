@@ -9,7 +9,7 @@ try {
     die("Erreur de connexion : " . $e->getMessage());
 }
 
-# Variable pour le message de succès (redirection depuis ajouter)
+# Message de succès (redirection depuis ajouter)
 $successMessage = isset($_GET['success']) ? true : false;
 
 # Routage suivant $_GET['page']
@@ -18,9 +18,7 @@ $page = $_GET['page'] ?? 'accueil';
 switch ($page) {
 
     case 'commentaires':
-        // compter sans charger
         $nbCommentaires = countAllCommentaires($connectDB);
-        // charger les commentaires
         $commentaires = readAllCommentaires($connectDB);
         $connectDB = null;
         include ROOT_PROJECT . "/view/commentaire_html.php";
@@ -28,9 +26,9 @@ switch ($page) {
 
     case 'ajouter':
         // traitement du formulaire POST
-        if ($_SERVER['REQUEST_METHOD'] === 'POST' 
+        if ($_SERVER['REQUEST_METHOD'] === 'POST'
             && isset($_POST['email'], $_POST['full_name'], $_POST['title'], $_POST['text_comment'])) {
-            
+
             $insert = addCommentaire(
                 $connectDB,
                 $_POST['email'],
@@ -41,7 +39,6 @@ switch ($page) {
 
             if ($insert) {
                 $connectDB = null;
-                // redirection vers commentaires avec message de succès
                 header("Location: ?page=commentaires&success=1");
                 exit();
             } else {
@@ -54,7 +51,6 @@ switch ($page) {
 
     // accueil par défaut
     default:
-        // on récupère le nombre de commentaires (sans les charger)
         $nbCommentaires = countAllCommentaires($connectDB);
         $connectDB = null;
         include ROOT_PROJECT . "/view/homepage.html.php";
