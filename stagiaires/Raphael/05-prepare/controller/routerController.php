@@ -18,7 +18,7 @@ if(isset($_POST['email_message'],$_POST['texte_message'])){
     $insert = insertMessage($connectDB,$_POST['email_message'],$_POST['texte_message']);
 }
 
-// récupération de tous les messages (fake)
+// récupération de tous les messages 
 $messages = selectAllMessage($connectDB);
 
 // bonne pratique, fermeture de connexion
