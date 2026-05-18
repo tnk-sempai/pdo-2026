@@ -1,0 +1,350 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Instrument Sans', sans-serif;
+    background-color: #f4f4f8;
+    color: #333;
+    padding-top: 60px; /* espace pour la navbar sticky */
+}
+
+/* ===================== NAVBAR STICKY ===================== */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #2c3e50;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    height: 60px;
+    z-index: 1000;
+}
+
+.nav-brand {
+    font-family: 'Bebas Neue', sans-serif;
+    color: #fff;
+    font-size: 1.6rem;
+    letter-spacing: 2px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 5px;
+}
+
+.nav-links a {
+    color: #ecf0f1;
+    text-decoration: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+    font-size: 0.95rem;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    background-color: #3498db;
+    color: #fff;
+}
+
+.hamburger {
+    display: none;
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 1.8rem;
+    cursor: pointer;
+}
+
+/* ===================== CONTAINER ===================== */
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 30px 20px;
+}
+
+/* ===================== HEADER ===================== */
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+header h1 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2.5rem;
+    color: #2c3e50;
+    letter-spacing: 2px;
+}
+
+header p {
+    font-family: 'DM Mono', monospace;
+    color: #7f8c8d;
+    margin-top: 5px;
+}
+
+/* ===================== ABOUT SECTION ===================== */
+.about-section {
+    margin-bottom: 40px;
+}
+
+.about-section h2 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.8rem;
+    color: #2c3e50;
+    margin-bottom: 15px;
+}
+
+.about-section p {
+    line-height: 1.7;
+    margin-bottom: 20px;
+}
+
+.gallery {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.gallery img {
+    width: 250px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s;
+}
+
+.gallery img:hover {
+    transform: scale(1.03);
+}
+
+/* ===================== LINKS SECTION ===================== */
+.links-section {
+    text-align: center;
+    margin: 40px 0;
+    padding: 25px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.links-section p {
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+}
+
+.links-buttons {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 24px;
+    background-color: #2c3e50;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    font-size: 0.95rem;
+}
+
+.btn:hover {
+    background-color: #34495e;
+}
+
+.btn-accent {
+    background-color: #3498db;
+}
+
+.btn-accent:hover {
+    background-color: #2980b9;
+}
+
+/* ===================== MESSAGES ===================== */
+.insert_message {
+    background-color: #27ae60;
+    color: #fff;
+    padding: 15px;
+    border-radius: 6px;
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+
+.insert_message2 {
+    background-color: #e74c3c;
+    color: #fff;
+    padding: 15px;
+    border-radius: 6px;
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+
+.insert_message2 a {
+    color: #fff;
+    text-decoration: underline;
+    margin-left: 10px;
+}
+
+/* ===================== MESSAGES SECTION ===================== */
+.messages-section {
+    margin-bottom: 30px;
+}
+
+.messages-section h2 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.8rem;
+    color: #2c3e50;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.comment-card {
+    background-color: #fff;
+    padding: 20px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+    border-left: 4px solid #3498db;
+}
+
+.comment-card h3 {
+    font-size: 1.15rem;
+    color: #2c3e50;
+    margin-bottom: 8px;
+}
+
+.comment-meta {
+    font-size: 0.85rem;
+    color: #7f8c8d;
+    font-family: 'DM Mono', monospace;
+    margin-bottom: 10px;
+}
+
+.comment-text {
+    line-height: 1.6;
+    color: #444;
+}
+
+/* ===================== FORM ===================== */
+.form-section {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    margin-bottom: 30px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 6px;
+    color: #2c3e50;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px 14px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-family: 'Instrument Sans', sans-serif;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #3498db;
+    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.15);
+}
+
+.form-group small {
+    display: block;
+    margin-top: 4px;
+    color: #95a5a6;
+    font-size: 0.8rem;
+}
+
+.submit-btn {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.05rem;
+    font-family: 'Instrument Sans', sans-serif;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.submit-btn:hover {
+    background-color: #2980b9;
+}
+
+/* ===================== FOOTER ===================== */
+footer {
+    text-align: center;
+    padding: 20px 0;
+    color: #95a5a6;
+    font-size: 0.85rem;
+    border-top: 1px solid #ddd;
+    margin-top: 30px;
+}
+
+/* ===================== RESPONSIVE ===================== */
+@media screen and (max-width: 768px) {
+
+    .hamburger {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: #2c3e50;
+        padding: 10px 0;
+    }
+
+    .nav-links.open {
+        display: flex;
+    }
+
+    .nav-links a {
+        padding: 12px 20px;
+        border-radius: 0;
+    }
+
+    .gallery img {
+        width: 100%;
+        max-width: 350px;
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+}
