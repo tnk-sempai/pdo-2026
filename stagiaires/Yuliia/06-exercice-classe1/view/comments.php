@@ -15,6 +15,18 @@
         include ROOT_PROJECT . "/view/inc/header.php";
         ?>
     </nav>
+    <nav class="nav_mobile">
+    
+    <?php
+    include ROOT_PROJECT . "/view/inc/header_mobile.php";
+    ?>
+    
+</nav>
+<ul class="nav_mobile_list">
+    <li class="nav_mobile_item"><a class="nav_mobile_link" href="./">Accueil</a></li>
+    <li class="nav_mobile_item"><a class="nav_mobile_link" href="?p=addComment">Ajoutre un commentaire</a></li>
+    <li class="nav_mobile_item"><a class="nav_mobile_link" href="?p=comments">Commentaires</a></li>
+</ul>
 </header>
 <div>
     <section class="section_wrapper">
@@ -35,15 +47,24 @@
                     foreach ($comments as $comment):
                     ?>
                         <div class="comments_card">
-                            <h3> <span class="write_by"> Ecrit par:</span> <?= htmlspecialchars($comment['email']) ?> le <?= $comment['post_date'] ?></h3>
-                            <p><?=nl2br($comment['text_comment']) ?></p>
-                        </div>
+    <div class="comment_avatar">
+        <?= strtoupper(substr($comment['email'], 0, 2)) ?>
+    </div>
+    <div class="comment_body">
+        <div class="comment_meta">
+            <span class="write_by"><?= htmlspecialchars($comment['email']) ?></span>
+            <span class="comment_date"><?= $comment['post_date'] ?></span>
+        </div>
+        <p><?= nl2br(htmlspecialchars($comment['text_comment'])) ?></p>
+    </div>
+</div>
                 <?php
                     endforeach;
                 endif;
                 ?>
 </div>        </section>
 </section>
+<script src="js/script.js"></script>
 </body>
 
 </html>

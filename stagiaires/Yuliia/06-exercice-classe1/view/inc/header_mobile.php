@@ -9,11 +9,11 @@
         <span class="hidden_text">orld</span>
     </div>
 </div>
- <button id="btn_nav" >|||</button>
+<button id="btn_nav" aria-label="Open menu">
+    <span></span>
+    <span></span>
+    <span></span>
+</button>
 
-<ul class="nav_mobile_list">
-        <li class="nav_mobile_item"><a class="nav_mobile_link" href="./">Accueil</a></li>
-        <li class="nav_mobile_item"><a class="nav_mobile_link" href="?p=addComment">Ajoutre un commentaire</a></li>
-        <li class="nav_mobile_item"><a class="nav_mobile_link" href="?p=comments">Commentaires</a></li>
-    </ul>
+
  

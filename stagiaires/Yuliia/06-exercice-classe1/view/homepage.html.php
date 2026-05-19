@@ -14,6 +14,18 @@
         include ROOT_PROJECT . "/view/inc/header.php";
         ?>
     </nav>
+    <nav class="nav_mobile">
+    
+    <?php
+    include ROOT_PROJECT . "/view/inc/header_mobile.php";
+    ?>
+    
+</nav>
+<ul class="nav_mobile_list">
+    <li class="nav_mobile_item"><a class="nav_mobile_link" href="./">Accueil</a></li>
+    <li class="nav_mobile_item"><a class="nav_mobile_link" href="?p=addComment">Ajoutre un commentaire</a></li>
+    <li class="nav_mobile_item"><a class="nav_mobile_link" href="?p=comments">Commentaires</a></li>
+</ul>
 </header>
 <div class="hero">
     <div class="hero_wrapper">
@@ -44,6 +56,7 @@
         <a class="add_comment_link" href="?p=addComment">Ajoutre un commentaire</a>
         </div>
     </div>
+    <script src="js/script.js"></script>
 </body>
 
 </html>
