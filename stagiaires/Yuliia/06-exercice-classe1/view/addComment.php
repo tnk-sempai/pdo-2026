@@ -36,7 +36,7 @@
         <input type="email" id="email" name="email" placeholder="email@gmail.com" autocomplete="email">
         <label for="full_name">Prenom</label>
         <input type="text" id="full_name" name="full_name" placeholder="Michel Michel">
-        <label for="title">Title</label>
+        <label for="title">Titre</label>
         <input type="text" name="title" id="title" placeholder="title">
         <label for="text_comment">Message</label>
         <textarea id="text_comment" name="text_comment" rows="4" placeholder="Ce que vous avez pensé de votre visite..."></textarea>

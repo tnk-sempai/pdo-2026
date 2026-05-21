@@ -30,6 +30,7 @@
 </header>
 <div>
     <section class="section_wrapper">
+        <section class="comments_section"> 
     <?php
             $nbComment = count($comments);
             if (empty($nbComment)):
@@ -41,6 +42,8 @@
                 // preparation du pluriel si on a plus d'un message
                 $pluriel = $nbComment > 1 ? "s" : "";
             ?>
+            
+</section>
                 <section class="comments_section">
                     <h2>Message<?= $pluriel ?> récent<?= $pluriel ?> (<?= $nbComment ?>)</h2>
                     <?php

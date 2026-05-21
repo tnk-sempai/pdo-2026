@@ -9,7 +9,20 @@ function addCommentaire(PDO $db,string $email,string $text_comment,string $title
     $full_name = htmlspecialchars(trim(strip_tags($full_name)));
     $title = htmlspecialchars(trim(strip_tags($title)));
     
-    if($email==false || empty($text_comment)) return false;
+      if($email===false             ||
+    strlen($email)>120            ||
+    empty($full_name)            ||
+    strlen($full_name)<5         ||
+    strlen($full_name)>120        ||
+    empty($title)                 ||
+    strlen($title)<5              ||
+    strlen($title)>180           ||
+    empty($text_comment)          ||
+    strlen($text_comment)<5       ||
+    strlen($text_comment)>1000   
+    ) return false;
+ 
+    
     $prepare = $db->prepare("
     INSERT INTO `commentaire`(`email`,`text_comment`,`full_name`,`title`)
     VALUES(:email,:text_comment,:full_name,:title); 
