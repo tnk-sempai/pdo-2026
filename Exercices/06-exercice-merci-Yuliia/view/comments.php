@@ -32,7 +32,8 @@
     <section class="section_wrapper">
         <section class="comments_section"> 
     <?php
-            $nbComment = count($comments);
+            
+            $nbComment = $countComments;
             if (empty($nbComment)):
             ?>
                 <h2>Il n'y a pas encore de messages</h2>
@@ -41,6 +42,9 @@
             else:
                 // preparation du pluriel si on a plus d'un message
                 $pluriel = $nbComment > 1 ? "s" : "";
+            
+            // affichage de la pagination    
+            echo $pagination; 
             ?>
             
 </section>
@@ -63,6 +67,8 @@
 </div>
                 <?php
                     endforeach;
+                    // affichage de la pagination    
+                    echo $pagination; 
                 endif;
                 ?>
 </div>        </section>

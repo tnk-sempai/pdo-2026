@@ -17,7 +17,8 @@ const MARIA_DSN = DB_CONNECT_TYPE.":host=".DB_CONNECT_HOST. ";dbname=".DB_CONNEC
 const ROOT_PROJECT = __DIR__;
 
 // pour la pagination
-const NB_BY_PAGE = 5;
+const PAGINATION_NB_PAGE = 10; # nombre par page
+const PAGINATION_NAME_GET = 'page';
 
 const ARRAY_VALID_PAGES=[
 'comments',
