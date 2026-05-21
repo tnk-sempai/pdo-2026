@@ -3,9 +3,9 @@
 
 // variable de développement, à dupliquer
 // son le nom de config.php
-const DB_CONNECT_TYPE = "mysql";
+const DB_CONNECT_TYPE = "mysql"; // MySQL et MariaDB
 const DB_CONNECT_HOST = "localhost";
-const DB_CONNECT_PORT = 3307;
+const DB_CONNECT_PORT = 3307;// WAMP -> MariaDB
 const DB_CONNECT_NAME = "exe_06";
 const DB_CONNECT_CHARSET = "utf8mb4";
 const DB_CONNECT_USER = "root";
@@ -18,3 +18,8 @@ const ROOT_PROJECT = __DIR__;
 
 // pour la pagination
 const NB_BY_PAGGE = 5;
+
+const ARRAY_VALID_PAGES=[
+'comments',
+'addComment',
+];
