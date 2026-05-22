@@ -57,8 +57,16 @@ if($section==='homepage'){
 }elseif($section==='ajouter'){
 
     # formulaire envoyé au backend
-    if(isset($_POST['email'],$_POST['full_name'],$_POST['full_name'],$_POST['text_comment'])){
-        
+    if(isset($_POST['email'],$_POST['title'],$_POST['full_name'],$_POST['text_comment'])){
+        // tentative d'insertion (protections dans la fonction)
+        $insert = addOneCommentaire(
+            db:$connectDB,
+            email:$_POST['email'],
+            full_name:$_POST['full_name'],
+            text_comment:$_POST['text_comment'],
+            title:$_POST['title']
+        );
+        var_dump($insert);
     }
 
     /* avec les protections frontend */
