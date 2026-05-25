@@ -1,9 +1,8 @@
-<?php $pageTitle = 'Ajouter un commentaire'; ?>
 <?php require __DIR__ . '/_header.html.php'; ?>
 
 <h1>Ajouter un commentaire</h1>
 
-<form action="index.php?page=ajouter" method="post" id="commentForm" novalidate>
+<form action="" method="post" id="commentForm" novalidate>
 
     <div class="form-group">
         <label for="email">Email *</label>

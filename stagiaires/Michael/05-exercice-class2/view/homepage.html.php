@@ -1,4 +1,3 @@
-<?php $pageTitle = 'Accueil'; ?>
 <?php require __DIR__ . '/_header.html.php'; ?>
 
 <h1>Bienvenue sur mon site</h1>
@@ -19,8 +18,8 @@
 </div>
 
 <div class="page-actions">
-    <a href="index.php?page=commentaires" class="btn">Voir les commentaires</a>
-    <a href="index.php?page=ajouter" class="btn">Ajouter un commentaire</a>
+    <a href="./?section=commentaires" class="btn">Voir les commentaires</a>
+    <a href="./?section=ajouter" class="btn">Ajouter un commentaire</a>
 </div>
 
 <?php require __DIR__ . '/_footer.html.php'; ?>
